@@ -1,3 +1,14 @@
+import { DateTime } from "../node_modules/luxon";
+const timeTest = DateTime.local().setZone("UTC+1");
+console.log(`${timeTest.c.hour}h ${timeTest.c.minute}m ${timeTest.c.second}s`);
+import axios from "../node_modules/axios";
+
+const getAxios = () => {
+  axios.get("https://reqres.in/api/users").then(response => {
+    console.log(response);
+  });
+};
+
 const createContainer = (data, i) => {
   const daysOfTheWeekArray = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const date = new Date();
@@ -22,7 +33,7 @@ const createContainer = (data, i) => {
   card.appendChild(contentBox);
 
   const dowContentBeforeSliderAnimation = document.createElement("h2");
-  dowContentBeforeSliderAnimation.innerHTML = weekDays;
+  dowContentBeforeSliderAnimation.innerText = `${weekDays}`;
   contentBox.appendChild(dowContentBeforeSliderAnimation);
 
   const tempDescription = document.createElement("h4");
