@@ -1,3 +1,5 @@
-config.js
+# commented out config.js so it's easier for you to check this project
+# config.js
+
 dist
 node_modules
