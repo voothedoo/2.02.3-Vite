@@ -1,9 +1,10 @@
+//testing and trying out Luxon, then it's the code for the app.
 import { DateTime } from "../node_modules/luxon";
 const timeTest = DateTime.local().setZone("UTC+1");
 console.log(`${timeTest.c.hour}h ${timeTest.c.minute}m ${timeTest.c.second}s`);
 console.log(`${timeTest.toLocaleString(DateTime.DATETIME_MED)}`);
 
-
+//domUtils.js code below
 const createContainer = (data, i) => {
   const daysOfTheWeekArray = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   const date = new Date();
